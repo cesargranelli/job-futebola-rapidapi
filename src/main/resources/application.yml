@@ -22,16 +22,9 @@ logging:
           evento:
             datasources:
               restapi:
-                sofascore:
-                  SofaScoreFeignClient: DEBUG
+                rapidapi:
+                  RapidapiFeignClient: DEBUG
 ---
-# noinspection undefined
-app:
-  config:
-    endpoint:
-      sofascore:
-        players: ${sofascore.uri}/team/{idTeam}/players
-
 spring:
   devtools:
     livereload:

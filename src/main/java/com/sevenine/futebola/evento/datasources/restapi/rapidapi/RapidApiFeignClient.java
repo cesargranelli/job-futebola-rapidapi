@@ -1,6 +1,6 @@
-package com.sevenine.futebola.evento.datasources.restapi.sofascore;
+package com.sevenine.futebola.evento.datasources.restapi.rapidapi;
 
-import com.sevenine.futebola.evento.datasources.restapi.sofascore.response.PlayerResponse;
+import com.sevenine.futebola.evento.datasources.restapi.rapidapi.response.PlayerResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @FeignClient(name = "rapidapi")
-public interface SofaScoreFeignClient {
+public interface RapidApiFeignClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/team/{idTeam}/players", consumes = "application/json")
     Map<String, List<Map<String, PlayerResponse>>> getPlayers(@PathVariable("idTeam") Long idTeam);

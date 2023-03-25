@@ -4,13 +4,12 @@ import com.sevenine.futebola.evento.datasources.database.ClubeJpaRepository;
 import com.sevenine.futebola.evento.datasources.database.ConfiguracaoJpaRepository;
 import com.sevenine.futebola.evento.datasources.database.data.ClubeData;
 import com.sevenine.futebola.evento.datasources.database.data.ConfiguracaoData;
-import com.sevenine.futebola.evento.datasources.restapi.sofascore.SofaScoreFeignClient;
-import com.sevenine.futebola.evento.datasources.restapi.sofascore.response.PlayerResponse;
+import com.sevenine.futebola.evento.datasources.restapi.rapidapi.RapidApiFeignClient;
+import com.sevenine.futebola.evento.datasources.restapi.rapidapi.response.PlayerResponse;
 import com.sevenine.futebola.evento.entities.Parametros;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.openfeign.FeignAutoConfiguration;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -32,7 +31,7 @@ public class ScheduledAtualizaJogadoresService {
     private ClubeJpaRepository clubeJpaRepository;
 
     @Autowired
-    private SofaScoreFeignClient sofaScoreFeignClient;
+    private RapidApiFeignClient rapidApiFeignClient;
 
     //    @Scheduled(cron = "@hourly")
     @Scheduled(cron = "0/10 * * * * *")
@@ -49,7 +48,7 @@ public class ScheduledAtualizaJogadoresService {
 
         List<ClubeData> clubes = clubeJpaRepository.findAll();
 
-        Map<String, List<Map<String, PlayerResponse>>> players = sofaScoreFeignClient.getPlayers(1973L);
+        Map<String, List<Map<String, PlayerResponse>>> players = rapidApiFeignClient.getPlayers(1973L);
 
         log.info("The time is now {}", dateFormat.format(new Date()));
     }

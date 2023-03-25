@@ -1,4 +1,4 @@
-package com.sevenine.futebola.evento.datasources.restapi.sofascore.response;
+package com.sevenine.futebola.evento.datasources.restapi.rapidapi.response;
 
 import lombok.Getter;
 import lombok.Setter;
