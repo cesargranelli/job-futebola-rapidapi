@@ -1,6 +1,8 @@
 package com.sevenine.futebola.evento.interactors;
 
+import com.sevenine.futebola.evento.datasources.database.ClubeJpaRepository;
 import com.sevenine.futebola.evento.datasources.database.ConfiguracaoJpaRepository;
+import com.sevenine.futebola.evento.datasources.database.data.ClubeData;
 import com.sevenine.futebola.evento.datasources.database.data.ConfiguracaoData;
 import com.sevenine.futebola.evento.entities.Parametros;
 import org.slf4j.Logger;
@@ -23,13 +25,16 @@ public class ScheduledAtualizaJogadoresService {
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
     @Autowired
-    private ConfiguracaoJpaRepository jpaRepository;
+    private ConfiguracaoJpaRepository configuracaoJpaRepository;
+
+    @Autowired
+    private ClubeJpaRepository clubeJpaRepository;
 
     //    @Scheduled(cron = "@hourly")
     @Scheduled(cron = "0/10 * * * * *")
     public void execute() {
         Optional<ConfiguracaoData> optional =
-                jpaRepository.findByCodigo("1ff2df54-caa1-11ed-8305-a251453ec86a");
+                configuracaoJpaRepository.findByCodigo("1ff2df54-caa1-11ed-8305-a251453ec86a");
 
         Parametros parametros = new Parametros(optional.orElseThrow().getParametros());
 
@@ -37,6 +42,9 @@ public class ScheduledAtualizaJogadoresService {
 
         log.info(String.valueOf(contain));
         log.info(String.valueOf(LocalTime.of(20, 0, 0)));
+
+        List<ClubeData> clubes = clubeJpaRepository.findAll();
+
         log.info("The time is now {}", dateFormat.format(new Date()));
     }
 
