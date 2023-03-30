@@ -13,7 +13,7 @@ import lombok.Setter;
 @Entity(name = "Jogadores")
 public class JogadorData {
 
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomeCompleto;
     private String nomeCurto;

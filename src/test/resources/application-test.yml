@@ -31,10 +31,6 @@ app:
   config:
     job:
       codigoAtualizaJogadores: 1ff2df54-caa1-11ed-8305-a251453ec86a
-    exception:
-      codigoNaoConfigurado:
-        codigo: 101
-        descricao: Código não cadastrado nas configurações
 ---
 spring:
   devtools:
