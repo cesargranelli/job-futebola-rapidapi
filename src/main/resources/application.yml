@@ -35,6 +35,12 @@ app:
       codigoNaoConfigurado:
         codigo: 101
         descricao: Código não cadastrado nas configurações
+      foraDoHorarioDeExecucao:
+        codigo: 102
+        descricao: Fora do horário de execução
+      horarioJaExecutado:
+        codigo: 103
+        descricao: Já ocorreu execução para o horário
 ---
 spring:
   devtools:
