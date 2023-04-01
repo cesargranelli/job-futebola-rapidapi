@@ -20,6 +20,7 @@ public class ConsultaConfiguracao implements ConsultaConfiguracaoPort {
     private final JsonMapper jsonMapper;
     private final ConfiguracaoJpaRepository jpaRepository;
 
+    @Override
     public Parametros consulta(final String codigo) {
         Optional<ConfiguracaoData> optional = jpaRepository.findByCodigo(codigo);
 

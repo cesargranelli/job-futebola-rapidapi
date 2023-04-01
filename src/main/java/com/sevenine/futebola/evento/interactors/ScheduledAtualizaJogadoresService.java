@@ -1,18 +1,18 @@
 package com.sevenine.futebola.evento.interactors;
 
-import com.fasterxml.jackson.databind.json.JsonMapper;
-import com.sevenine.futebola.evento.configs.properties.AppConfigExceptionProperties;
 import com.sevenine.futebola.evento.configs.properties.AppConfigJobProperties;
 import com.sevenine.futebola.evento.datasources.database.ClubeJpaRepository;
-import com.sevenine.futebola.evento.datasources.database.ConfiguracaoJpaRepository;
 import com.sevenine.futebola.evento.datasources.database.JogadorJpaRepository;
-import com.sevenine.futebola.evento.datasources.database.LogJpaRepository;
-import com.sevenine.futebola.evento.datasources.database.data.*;
+import com.sevenine.futebola.evento.datasources.database.data.ClubeData;
+import com.sevenine.futebola.evento.datasources.database.data.FornecedorData;
+import com.sevenine.futebola.evento.datasources.database.data.JogadorData;
 import com.sevenine.futebola.evento.datasources.restapi.rapidapi.RapidApiFeignClient;
 import com.sevenine.futebola.evento.datasources.restapi.rapidapi.response.PlayerResponse;
+import com.sevenine.futebola.evento.entities.Logs;
 import com.sevenine.futebola.evento.entities.Parametros;
-import com.sevenine.futebola.evento.handlers.exceptions.ExecucaoJobException;
+import com.sevenine.futebola.evento.handlers.exceptions.HorarioJaExecucaoException;
 import com.sevenine.futebola.evento.interactors.usecase.ConsultaConfiguracao;
+import com.sevenine.futebola.evento.interactors.usecase.ConsultaLog;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +20,11 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 @RequiredArgsConstructor
 @Service
@@ -30,44 +34,26 @@ public class ScheduledAtualizaJogadoresService {
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-    private final JsonMapper jsonMapper;
-
     private final AppConfigJobProperties jobProperties;
-    private final AppConfigExceptionProperties exceptionProperties;
 
-    private final ConfiguracaoJpaRepository configuracaoJpaRepository;
-    private final LogJpaRepository logJpaRepository;
     private final ClubeJpaRepository clubeJpaRepository;
     private final RapidApiFeignClient rapidApiFeignClient;
     private final JogadorJpaRepository jogadorJpaRepository;
 
     private final ConsultaConfiguracao consultaConfiguracao;
+    private final ConsultaLog consultaLog;
 
     //    @Scheduled(cron = "@hourly")
     @Scheduled(cron = "0/10 * * * * *")
     public void executa() {
         Parametros parametros = consultaConfiguracao.consulta(jobProperties.getCodigoAtualizaJogadores());
 
-        Optional<ConfiguracaoData> optionalConfiguracao =
-                configuracaoJpaRepository.findByCodigo(jobProperties.getCodigoAtualizaJogadores());
+        List<Logs> logs = consultaLog.consulta(jobProperties.getCodigoAtualizaJogadores(), LocalDate.now());
 
-        if (optionalConfiguracao.isEmpty()) throw new ExecucaoJobException(
-                exceptionProperties.getCodigoNaoConfigurado().getCodigo(),
-                exceptionProperties.getCodigoNaoConfigurado().getDescricao());
-
-        Optional<LogData> optionalLog =
-                logJpaRepository.findByCodigoConfiguracao(jobProperties.getCodigoAtualizaJogadores());
-
-        if (optionalLog.isEmpty()) throw new ExecucaoJobException(
-                exceptionProperties.getForaDoHorarioDeExecucao().getCodigo(),
-                exceptionProperties.getForaDoHorarioDeExecucao().getDescricao());
-
-        boolean contain = parametros.getHorarios().stream()
-                .anyMatch(hora -> hora.getHour() == optionalLog.orElseThrow().getDataHoraExecucao().getHour());
-
-        if (contain) throw new ExecucaoJobException(
-                exceptionProperties.getHorarioJaExecutado().getCodigo(),
-                exceptionProperties.getHorarioJaExecutado().getDescricao());
+        if (parametros.getHorarios().stream()
+                .anyMatch(hora -> logs.stream()
+                        .anyMatch(value -> value.getDataHoraExecucao().getHour() == hora.getHour())))
+            throw new HorarioJaExecucaoException();
 
         List<ClubeData> clubes = clubeJpaRepository.findAll();
 

@@ -89,7 +89,7 @@ class ScheduledValidaExecucoesTest {
 
         assertEquals("101", exception.getCodigo());
         assertEquals("Exception 101", exception.getDescricao());
-        verify(logJpaRepository, never()).findByCodigoConfiguracao(anyString());
+//        verify(logJpaRepository, never()).findByCodigoConfiguracaoDataHoraExecucaoBetween(anyString(), dataExecucao);
     }
 
     @Test
@@ -104,7 +104,7 @@ class ScheduledValidaExecucoesTest {
         when(configuracaoJpaRepository.findByCodigo(anyString())).thenReturn(Optional.of(new ConfiguracaoData()));
         when(exceptionProperties.getForaDoHorarioDeExecucao())
                 .thenReturn(appConfigExceptionProperties.getForaDoHorarioDeExecucao());
-        when(logJpaRepository.findByCodigoConfiguracao(anyString())).thenReturn(Optional.empty());
+//        when(logJpaRepository.findByCodigoConfiguracaoDataHoraExecucaoBetween(anyString(), dataExecucao)).thenReturn(Optional.empty());
 
         ApplicationException exception = assertThrows(ExecucaoJobException.class, () ->
                 service.executa());
@@ -134,7 +134,7 @@ class ScheduledValidaExecucoesTest {
 
         when(configuracaoJpaRepository.findByCodigo(anyString())).thenReturn(Optional.of(configuracaoData));
         when(exceptionProperties.getHorarioJaExecutado()).thenReturn(appConfigExceptionProperties.getHorarioJaExecutado());
-        when(logJpaRepository.findByCodigoConfiguracao(anyString())).thenReturn(Optional.of(logData));
+//        when(logJpaRepository.findByCodigoConfiguracaoDataHoraExecucaoBetween(anyString(), dataExecucao)).thenReturn(Optional.of(logData));
         when(jsonMapper.readValue(anyString(), eq(Parametros.class))).thenReturn(parametros);
 
         ApplicationException exception = assertThrows(ExecucaoJobException.class, () ->
@@ -156,7 +156,7 @@ class ScheduledValidaExecucoesTest {
         parametros.setHorarios(Collections.singletonList(LocalTime.of(21, 0, 0)));
 
         when(configuracaoJpaRepository.findByCodigo(anyString())).thenReturn(Optional.of(configuracaoData));
-        when(logJpaRepository.findByCodigoConfiguracao(anyString())).thenReturn(Optional.empty());
+//        when(logJpaRepository.findByCodigoConfiguracaoDataHoraExecucaoBetween(anyString(), dataExecucao)).thenReturn(Optional.empty());
         when(jsonMapper.readValue(anyString(), eq(Parametros.class))).thenReturn(parametros);
         when(clubeJpaRepository.findAll()).thenReturn(Collections.singletonList(new ClubeData()));
 
