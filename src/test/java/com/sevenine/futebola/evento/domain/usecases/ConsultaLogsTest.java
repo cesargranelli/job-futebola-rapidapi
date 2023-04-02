@@ -27,7 +27,7 @@ import static org.springframework.test.util.AssertionErrors.assertTrue;
 class ConsultaLogsTest {
 
     @InjectMocks
-    private ConsultaLog consultaLog;
+    private ConsultaLogs consultaLogs;
 
     @Mock
     private ObjectMapper objectMapper;
@@ -43,7 +43,7 @@ class ConsultaLogsTest {
         when(objectMapper.convertValue(anyCollection(), eq(List.class)))
                 .thenReturn(Collections.emptyList());
 
-        List<Logs> logsList = consultaLog.consulta("codigoParametros", LocalDate.now());
+        List<Logs> logsList = consultaLogs.consulta("codigoParametros", LocalDate.now());
 
         assertTrue("Objeto lista não vazio", logsList.isEmpty());
     }
@@ -56,7 +56,7 @@ class ConsultaLogsTest {
         when(objectMapper.convertValue(anyCollection(), eq(List.class)))
                 .thenReturn(Collections.singletonList(new Logs()));
 
-        List<Logs> logsList = consultaLog.consulta("codigoParametros", LocalDate.now());
+        List<Logs> logsList = consultaLogs.consulta("codigoParametros", LocalDate.now());
 
         assertTrue("Objeto lista retornou mais de um único item", logsList.size() == 1);
     }
@@ -69,7 +69,7 @@ class ConsultaLogsTest {
         when(objectMapper.convertValue(anyCollection(), eq(List.class)))
                 .thenReturn(Arrays.asList(new Logs(), new Logs()));
 
-        List<Logs> logsList = consultaLog.consulta("codigoParametros", LocalDate.now());
+        List<Logs> logsList = consultaLogs.consulta("codigoParametros", LocalDate.now());
 
         assertTrue("Objeto lista retornou menos do que 2 itens", logsList.size() >= 2);
     }

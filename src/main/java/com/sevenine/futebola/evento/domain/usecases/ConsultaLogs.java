@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sevenine.futebola.evento.adapter.repositories.LogJpaRepository;
 import com.sevenine.futebola.evento.adapter.repositories.data.LogData;
 import com.sevenine.futebola.evento.domain.entities.Logs;
-import com.sevenine.futebola.evento.domain.ports.ConsultaLogPort;
+import com.sevenine.futebola.evento.domain.ports.ConsultaLogsPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +14,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Component
-public class ConsultaLog implements ConsultaLogPort {
+public class ConsultaLogs implements ConsultaLogsPort {
 
     private final ObjectMapper objectMapper;
     private final LogJpaRepository logJpaRepository;

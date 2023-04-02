@@ -18,5 +18,6 @@ public class ClubeData {
     private String nomeCurto;
     private String nomeCodigo;
     private Long externoId;
+    private Long fornecedorId;
 
 }

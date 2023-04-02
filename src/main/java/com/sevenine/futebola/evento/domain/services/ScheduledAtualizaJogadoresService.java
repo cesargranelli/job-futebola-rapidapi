@@ -1,18 +1,20 @@
 package com.sevenine.futebola.evento.domain.services;
 
-import com.sevenine.futebola.evento.core.properties.AppConfigJobProperties;
+import com.sevenine.futebola.evento.adapter.endpoints.rapidapi.RapidApiFeignClient;
+import com.sevenine.futebola.evento.adapter.endpoints.rapidapi.response.PlayerResponse;
 import com.sevenine.futebola.evento.adapter.repositories.ClubeJpaRepository;
 import com.sevenine.futebola.evento.adapter.repositories.JogadorJpaRepository;
 import com.sevenine.futebola.evento.adapter.repositories.data.ClubeData;
 import com.sevenine.futebola.evento.adapter.repositories.data.FornecedorData;
 import com.sevenine.futebola.evento.adapter.repositories.data.JogadorData;
-import com.sevenine.futebola.evento.adapter.endpoints.rapidapi.RapidApiFeignClient;
-import com.sevenine.futebola.evento.adapter.endpoints.rapidapi.response.PlayerResponse;
+import com.sevenine.futebola.evento.core.exceptions.HorarioJaExecucaoException;
+import com.sevenine.futebola.evento.core.properties.AppConfigJobProperties;
+import com.sevenine.futebola.evento.domain.entities.Clubes;
 import com.sevenine.futebola.evento.domain.entities.Logs;
 import com.sevenine.futebola.evento.domain.entities.Parametros;
-import com.sevenine.futebola.evento.core.exceptions.HorarioJaExecucaoException;
-import com.sevenine.futebola.evento.domain.usecases.ConsultaConfiguracao;
-import com.sevenine.futebola.evento.domain.usecases.ConsultaLog;
+import com.sevenine.futebola.evento.domain.ports.ConsultaClubesPort;
+import com.sevenine.futebola.evento.domain.ports.ConsultaConfiguracoesPort;
+import com.sevenine.futebola.evento.domain.ports.ConsultaLogsPort;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,15 +42,16 @@ public class ScheduledAtualizaJogadoresService {
     private final RapidApiFeignClient rapidApiFeignClient;
     private final JogadorJpaRepository jogadorJpaRepository;
 
-    private final ConsultaConfiguracao consultaConfiguracao;
-    private final ConsultaLog consultaLog;
+    private final ConsultaConfiguracoesPort consultaConfiguracoes;
+    private final ConsultaLogsPort consultaLogs;
+    private final ConsultaClubesPort consultaClubes;
 
     //    @Scheduled(cron = "@hourly")
     @Scheduled(cron = "0/10 * * * * *")
     public void executa() {
-        Parametros parametros = consultaConfiguracao.consulta(jobProperties.getCodigoAtualizaJogadores());
+        Parametros parametros = consultaConfiguracoes.consulta(jobProperties.getCodigoAtualizaJogadores());
 
-        List<Logs> logs = consultaLog.consulta(jobProperties.getCodigoAtualizaJogadores(), LocalDate.now());
+        List<Logs> logs = consultaLogs.consulta(jobProperties.getCodigoAtualizaJogadores(), LocalDate.now());
 
         if (parametros.getHorarios().stream()
                 .anyMatch(hora -> logs.stream()
@@ -56,6 +59,7 @@ public class ScheduledAtualizaJogadoresService {
             throw new HorarioJaExecucaoException();
 
         List<ClubeData> clubes = clubeJpaRepository.findAll();
+        List<Clubes> clubesList = consultaClubes.consulta(1L);
 
         Map<String, List<Map<String, PlayerResponse>>> players = rapidApiFeignClient.getPlayers(1973L);
 

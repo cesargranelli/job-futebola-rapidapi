@@ -11,12 +11,11 @@ import com.sevenine.futebola.evento.adapter.repositories.LogJpaRepository;
 import com.sevenine.futebola.evento.adapter.repositories.data.ClubeData;
 import com.sevenine.futebola.evento.adapter.repositories.data.ConfiguracaoData;
 import com.sevenine.futebola.evento.adapter.repositories.data.LogData;
-import com.sevenine.futebola.evento.domain.services.ScheduledAtualizaJogadoresService;
 import com.sevenine.futebola.evento.domain.entities.Parametros;
 import com.sevenine.futebola.evento.core.exceptions.ApplicationException;
 import com.sevenine.futebola.evento.core.exceptions.ExecucaoJobException;
 import com.sevenine.futebola.evento.core.exceptions.data.ExceptionData;
-import com.sevenine.futebola.evento.domain.ports.ConsultaConfiguracaoPort;
+import com.sevenine.futebola.evento.domain.ports.ConsultaConfiguracoesPort;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -41,7 +40,7 @@ class ScheduledValidaExecucoesTest {
     private ScheduledAtualizaJogadoresService service;
 
     @Mock
-    private ConsultaConfiguracaoPort consultaConfiguracao;
+    private ConsultaConfiguracoesPort consultaConfiguracao;
 
     @Mock
     private ConfiguracaoJpaRepository configuracaoJpaRepository;

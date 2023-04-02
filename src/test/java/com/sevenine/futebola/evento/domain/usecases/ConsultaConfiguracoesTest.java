@@ -29,10 +29,10 @@ import static org.springframework.test.util.AssertionErrors.assertTrue;
 
 @MockitoSettings(strictness = Strictness.LENIENT)
 @ExtendWith(MockitoExtension.class)
-class ConsultaConfiguracaoTest {
+class ConsultaConfiguracoesTest {
 
     @InjectMocks
-    private ConsultaConfiguracao consultaConfiguracao;
+    private ConsultaConfiguracoes consultaConfiguracoes;
 
     @Mock
     private JsonMapper jsonMapper;
@@ -57,7 +57,7 @@ class ConsultaConfiguracaoTest {
         when(jsonMapper.readValue(anyString(), eq(Parametros.class))).thenReturn(parametros);
         when(jpaRepository.findByCodigo(anyString())).thenReturn(Optional.of(configuracaoData));
 
-        Parametros parametrosConsulta = consultaConfiguracao.consulta("codigoParametros");
+        Parametros parametrosConsulta = consultaConfiguracoes.consulta("codigoParametros");
 
         int hour1 = parametros.getHorarios().get(0).getHour();
         int hour2 = parametrosConsulta.getHorarios().get(0).getHour();
@@ -71,7 +71,7 @@ class ConsultaConfiguracaoTest {
         when(jpaRepository.findByCodigo(anyString())).thenReturn(Optional.empty());
 
         ApplicationException exception = assertThrows(ConfiguracaoNaoLocalizadaException.class, () ->
-                consultaConfiguracao.consulta("codigoParametros"));
+                consultaConfiguracoes.consulta("codigoParametros"));
 
         assertTrue("Objeto de tipo diferente do esperado",
                 exception.getClass().getName().contains("ConfiguracaoNaoLocalizadaException"));
@@ -87,7 +87,7 @@ class ConsultaConfiguracaoTest {
         when(jpaRepository.findByCodigo(anyString())).thenReturn(Optional.of(configuracaoData));
 
         RuntimeException exception = assertThrows(RuntimeException.class, () ->
-                consultaConfiguracao.consulta("codigoParametros"));
+                consultaConfiguracoes.consulta("codigoParametros"));
 
         assertTrue("Objeto de tipo diferente do esperado",
                 exception.getClass().getName().contains("RuntimeException"));
