@@ -38,7 +38,7 @@ class ConsultaLogsTest {
     @DisplayName("Deve retonar uma lista de logs vazia")
     @Test
     void sucessoSemLogs() {
-        when(jpaRepository.findByCodigoConfiguracaoDataHoraExecucaoBetween(anyString(), any(), any()))
+        when(jpaRepository.findByCodigoConfiguracaoAndDataHoraExecucaoBetween(anyString(), any(), any()))
                 .thenReturn(Collections.emptyList());
         when(objectMapper.convertValue(anyCollection(), eq(List.class)))
                 .thenReturn(Collections.emptyList());
@@ -51,7 +51,7 @@ class ConsultaLogsTest {
     @DisplayName("Retornando um único item na lista de logs")
     @Test
     void sucessoComUmItemNaLista() {
-        when(jpaRepository.findByCodigoConfiguracaoDataHoraExecucaoBetween(anyString(), any(), any()))
+        when(jpaRepository.findByCodigoConfiguracaoAndDataHoraExecucaoBetween(anyString(), any(), any()))
                 .thenReturn(Collections.singletonList(new LogData()));
         when(objectMapper.convertValue(anyCollection(), eq(List.class)))
                 .thenReturn(Collections.singletonList(new Logs()));
@@ -64,7 +64,7 @@ class ConsultaLogsTest {
     @DisplayName("Retornando mais de um item na lista de logs")
     @Test
     void sucessoComDoisItensNaLista() {
-        when(jpaRepository.findByCodigoConfiguracaoDataHoraExecucaoBetween(anyString(), any(), any()))
+        when(jpaRepository.findByCodigoConfiguracaoAndDataHoraExecucaoBetween(anyString(), any(), any()))
                 .thenReturn(Arrays.asList(new LogData(), new LogData()));
         when(objectMapper.convertValue(anyCollection(), eq(List.class)))
                 .thenReturn(Arrays.asList(new Logs(), new Logs()));

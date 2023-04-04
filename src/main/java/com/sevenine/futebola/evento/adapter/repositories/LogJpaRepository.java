@@ -7,5 +7,5 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public interface LogJpaRepository extends JpaRepository<LogData, Long> {
-    List<LogData> findByCodigoConfiguracaoDataHoraExecucaoBetween(String codigo, LocalDateTime dataInicio, LocalDateTime dataFim);
+    List<LogData> findByCodigoConfiguracaoAndDataHoraExecucaoBetween(String codigo, LocalDateTime dataInicio, LocalDateTime dataFim);
 }

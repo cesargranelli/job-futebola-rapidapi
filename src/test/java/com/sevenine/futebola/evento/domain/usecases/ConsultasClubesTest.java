@@ -5,6 +5,7 @@ import com.sevenine.futebola.evento.adapter.repositories.ClubeJpaRepository;
 import com.sevenine.futebola.evento.adapter.repositories.data.ClubeData;
 import com.sevenine.futebola.evento.domain.entities.Clubes;
 import com.sevenine.futebola.evento.domain.entities.Logs;
+import com.sevenine.futebola.evento.domain.enumerates.Fornecedor;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -41,7 +42,7 @@ class ConsultasClubesTest {
         when(objectMapper.convertValue(anyCollection(), eq(List.class)))
                 .thenReturn(Collections.emptyList());
 
-        List<Clubes> clubesList = consultaClubes.consulta(1L);
+        List<Clubes> clubesList = consultaClubes.consulta(Fornecedor.RAPIDAPI.getId());
 
         assertTrue("Objeto lista não vazio", clubesList.isEmpty());
     }
@@ -54,7 +55,7 @@ class ConsultasClubesTest {
         when(objectMapper.convertValue(anyCollection(), eq(List.class)))
                 .thenReturn(Collections.singletonList(new Logs()));
 
-        List<Clubes> clubesList = consultaClubes.consulta(1L);
+        List<Clubes> clubesList = consultaClubes.consulta(Fornecedor.RAPIDAPI.getId());
 
         assertTrue("Objeto lista retornou menos de 1 item", clubesList.size() == 1);
     }

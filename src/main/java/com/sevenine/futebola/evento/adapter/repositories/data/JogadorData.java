@@ -10,7 +10,7 @@ import lombok.Setter;
         uniqueConstraints = @UniqueConstraint(columnNames = {
                 "externoId", "fornecedor_id"
         }))
-@Entity(name = "Jogadores")
+@Entity(name = "Jogador")
 public class JogadorData {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

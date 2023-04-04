@@ -21,12 +21,12 @@ public class ConsultaLogs implements ConsultaLogsPort {
 
     @SuppressWarnings("unchecked")
     @Override
-    public List<Logs> consulta(String codigo, LocalDate dataExecucao) {
+    public List<Logs> consulta(final String codigo, final LocalDate dataExecucao) {
         LocalDateTime dataInicio = dataExecucao.atStartOfDay();
         LocalDateTime dataFim = dataInicio.plusDays(1);
 
         List<LogData> logDataList =
-                logJpaRepository.findByCodigoConfiguracaoDataHoraExecucaoBetween(codigo, dataInicio, dataFim);
+                logJpaRepository.findByCodigoConfiguracaoAndDataHoraExecucaoBetween(codigo, dataInicio, dataFim);
 
         return objectMapper.convertValue(logDataList, List.class);
     }

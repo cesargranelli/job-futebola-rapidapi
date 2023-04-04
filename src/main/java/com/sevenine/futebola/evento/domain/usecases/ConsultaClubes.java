@@ -1,5 +1,6 @@
 package com.sevenine.futebola.evento.domain.usecases;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sevenine.futebola.evento.adapter.repositories.ClubeJpaRepository;
 import com.sevenine.futebola.evento.adapter.repositories.data.ClubeData;
@@ -15,13 +16,13 @@ import java.util.List;
 public class ConsultaClubes implements ConsultaClubesPort {
 
     private final ObjectMapper objectMapper;
-    private final ClubeJpaRepository clubeJpaRepository;
+    private final ClubeJpaRepository jpaRepository;
 
-    @SuppressWarnings("unchecked")
     @Override
-    public List<Clubes> consulta(Long fornecedorId) {
-        List<ClubeData> clubeDataList = clubeJpaRepository.findByFornecedorId(fornecedorId);
+    public List<Clubes> consulta(final Long fornecedorId) {
+        List<ClubeData> clubeDataList = jpaRepository.findByFornecedorId(fornecedorId);
 
-        return objectMapper.convertValue(clubeDataList, List.class);
+        return objectMapper.convertValue(clubeDataList, new TypeReference<>() {
+        });
     }
 }
