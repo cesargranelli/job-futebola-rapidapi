@@ -9,6 +9,7 @@ spring:
         config:
           rapidapi:
             url: https://footapi7.p.rapidapi.com/api
+#            url: https://viacep.com.br/ws/01001000/json/
             defaultRequestHeaders:
               'X-RapidAPI-Key': '67f551b823msh34866d68c74885cp1f1224jsnd7e6dabf5245'
               'X-RapidAPI-Host': 'footapi7.p.rapidapi.com'
@@ -16,16 +17,19 @@ spring:
 logging:
   level:
     web: DEBUG
-    sql: DEBUG
+    sql: OFF
+    # noinspection undefined
+    org:
+      zalando:
+        logbook: DEBUG
     # noinspection undefined
     com:
       sevenine:
         futebola:
           evento:
-            datasources:
-              restapi:
-                rapidapi:
-                  RapidapiFeignClient: DEBUG
+            adapter:
+              endpoints:
+                rapidapi: TRACE
 # noinspection undefined
 app:
   config:

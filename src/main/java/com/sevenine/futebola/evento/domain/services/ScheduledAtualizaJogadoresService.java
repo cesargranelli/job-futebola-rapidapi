@@ -7,10 +7,7 @@ import com.sevenine.futebola.evento.domain.entities.Jogadores;
 import com.sevenine.futebola.evento.domain.entities.Logs;
 import com.sevenine.futebola.evento.domain.entities.Parametros;
 import com.sevenine.futebola.evento.domain.enumerates.Fornecedor;
-import com.sevenine.futebola.evento.domain.ports.ConsultaClubesPort;
-import com.sevenine.futebola.evento.domain.ports.ConsultaConfiguracoesPort;
-import com.sevenine.futebola.evento.domain.ports.ConsultaJogadoresPort;
-import com.sevenine.futebola.evento.domain.ports.ConsultaLogsPort;
+import com.sevenine.futebola.evento.domain.ports.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -27,6 +24,7 @@ public class ScheduledAtualizaJogadoresService {
     private final ConsultaLogsPort consultaLogs;
     private final ConsultaClubesPort consultaClubes;
     private final ConsultaJogadoresPort consultaJogadores;
+    private final SalvaJogadoresPort salvaJogadores;
 
     //    @Scheduled(cron = "@hourly")
     @Scheduled(cron = "0/10 * * * * *")
@@ -44,7 +42,7 @@ public class ScheduledAtualizaJogadoresService {
 
         List<Jogadores> jogadores = consultaJogadores.consulta(clubes);
 
-//        jogadorJpaRepository.saveAll(jogadores);
+        salvaJogadores.salva(jogadores);
     }
 
 }

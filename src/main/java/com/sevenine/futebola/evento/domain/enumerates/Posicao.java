@@ -10,7 +10,9 @@ public enum Posicao {
     D(2L, "DEF", "Defesa"),
     L(3L, "LAT", "Lateral"),
     M(4L, "MEI", "Meia"),
-    F(5L, "ATA", "Atacante");
+    F(5L, "ATA", "Atacante"),
+    V(8L, "", "Vazio"),
+    N(9L, null, "Nulo");
 
     private final Long id;
     private final String codigo;
