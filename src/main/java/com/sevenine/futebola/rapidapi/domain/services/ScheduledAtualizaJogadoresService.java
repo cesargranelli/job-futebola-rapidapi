@@ -9,7 +9,6 @@ import com.sevenine.futebola.rapidapi.domain.entities.Parametros;
 import com.sevenine.futebola.rapidapi.domain.enumerates.Fornecedor;
 import com.sevenine.futebola.rapidapi.domain.ports.*;
 import lombok.RequiredArgsConstructor;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -26,8 +25,6 @@ public class ScheduledAtualizaJogadoresService {
     private final ConsultaJogadoresPort consultaJogadores;
     private final SalvaJogadoresPort salvaJogadores;
 
-    //    @Scheduled(cron = "@hourly")
-    @Scheduled(cron = "0/10 * * * * *")
     public void executa() {
         Parametros parametros = consultaConfiguracoes.consulta(jobProperties.getCodigoAtualizaJogadores());
 

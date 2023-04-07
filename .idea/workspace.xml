@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96f82851-b662-4218-800c-83344c905efe" name="Changes" comment="Ajuste nas dependências do projeto">
+    <list default="true" id="96f82851-b662-4218-800c-83344c905efe" name="Changes" comment="Correção dos nomes no workspace">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/services/ScheduledAtualizaJogadoresService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/services/ScheduledAtualizaJogadoresService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,8 +112,10 @@
   </component>
   <component name="RunManager">
     <configuration name="JobFutebolaEventoApplication" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.sevenine.futebola.rapidapi.JobFutebolaEventoApplication" />
-      <module name="job-futebola-evento.main" />
+      <module name="job-futebola-rapidapi.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sevenine.futebola.rapidapi.*" />
@@ -254,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680842813199</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Correção dos nomes no workspace">
+      <created>1680843224802</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1680843224802</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -296,7 +306,8 @@
     <MESSAGE value="Salva jogadores no banco de dados" />
     <MESSAGE value="Alteração do nome do projeto" />
     <MESSAGE value="Ajuste nas dependências do projeto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajuste nas dependências do projeto" />
+    <MESSAGE value="Correção dos nomes no workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correção dos nomes no workspace" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
