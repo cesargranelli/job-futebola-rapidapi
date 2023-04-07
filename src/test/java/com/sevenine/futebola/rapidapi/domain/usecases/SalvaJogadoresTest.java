@@ -1,10 +1,10 @@
-package com.sevenine.futebola.evento.domain.usecases;
+package com.sevenine.futebola.rapidapi.domain.usecases;
 
-import com.sevenine.futebola.evento.adapter.repositories.JogadorJpaRepository;
-import com.sevenine.futebola.evento.adapter.repositories.data.JogadorData;
-import com.sevenine.futebola.evento.core.converters.JogadoresToJogadorDataConverter;
-import com.sevenine.futebola.evento.domain.entities.Jogadores;
-import com.sevenine.futebola.evento.domain.enumerates.Fornecedor;
+import com.sevenine.futebola.rapidapi.adapter.repositories.JogadorJpaRepository;
+import com.sevenine.futebola.rapidapi.adapter.repositories.data.JogadorData;
+import com.sevenine.futebola.rapidapi.core.converters.JogadoresToJogadorDataConverter;
+import com.sevenine.futebola.rapidapi.domain.entities.Jogadores;
+import com.sevenine.futebola.rapidapi.domain.enumerates.Fornecedor;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

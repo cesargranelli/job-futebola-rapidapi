@@ -1,6 +1,6 @@
-package com.sevenine.futebola.evento.domain.entities;
+package com.sevenine.futebola.rapidapi.domain.entities;
 
-import com.sevenine.futebola.evento.domain.enumerates.Fornecedor;
+import com.sevenine.futebola.rapidapi.domain.enumerates.Fornecedor;
 import lombok.Getter;
 import lombok.Setter;
 

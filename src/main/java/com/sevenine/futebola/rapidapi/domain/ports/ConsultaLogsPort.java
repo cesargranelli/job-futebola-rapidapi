@@ -1,6 +1,6 @@
-package com.sevenine.futebola.evento.domain.ports;
+package com.sevenine.futebola.rapidapi.domain.ports;
 
-import com.sevenine.futebola.evento.domain.entities.Logs;
+import com.sevenine.futebola.rapidapi.domain.entities.Logs;
 
 import java.time.LocalDate;
 import java.util.List;

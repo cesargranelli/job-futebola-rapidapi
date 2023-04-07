@@ -1,9 +1,9 @@
-package com.sevenine.futebola.evento.core.converters;
+package com.sevenine.futebola.rapidapi.core.converters;
 
-import com.sevenine.futebola.evento.adapter.endpoints.rapidapi.response.PlayerResponse;
-import com.sevenine.futebola.evento.domain.entities.Jogadores;
-import com.sevenine.futebola.evento.domain.enumerates.Fornecedor;
-import com.sevenine.futebola.evento.domain.enumerates.Posicao;
+import com.sevenine.futebola.rapidapi.adapter.endpoints.rapidapi.response.PlayerResponse;
+import com.sevenine.futebola.rapidapi.domain.entities.Jogadores;
+import com.sevenine.futebola.rapidapi.domain.enumerates.Fornecedor;
+import com.sevenine.futebola.rapidapi.domain.enumerates.Posicao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.convert.converter.Converter;

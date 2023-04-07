@@ -1,10 +1,10 @@
-package com.sevenine.futebola.evento.domain.usecases;
+package com.sevenine.futebola.rapidapi.domain.usecases;
 
-import com.sevenine.futebola.evento.adapter.endpoints.rapidapi.RapidApiFeignClient;
-import com.sevenine.futebola.evento.adapter.endpoints.rapidapi.response.PlayerResponse;
-import com.sevenine.futebola.evento.domain.entities.Clubes;
-import com.sevenine.futebola.evento.domain.entities.Jogadores;
-import com.sevenine.futebola.evento.domain.ports.ConsultaJogadoresPort;
+import com.sevenine.futebola.rapidapi.adapter.endpoints.rapidapi.RapidApiFeignClient;
+import com.sevenine.futebola.rapidapi.adapter.endpoints.rapidapi.response.PlayerResponse;
+import com.sevenine.futebola.rapidapi.domain.entities.Clubes;
+import com.sevenine.futebola.rapidapi.domain.entities.Jogadores;
+import com.sevenine.futebola.rapidapi.domain.ports.ConsultaJogadoresPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;

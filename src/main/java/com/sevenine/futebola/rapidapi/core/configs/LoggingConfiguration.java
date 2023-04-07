@@ -1,4 +1,4 @@
-package com.sevenine.futebola.evento.core.configs;
+package com.sevenine.futebola.rapidapi.core.configs;
 
 import feign.Logger;
 import org.springframework.context.annotation.Bean;

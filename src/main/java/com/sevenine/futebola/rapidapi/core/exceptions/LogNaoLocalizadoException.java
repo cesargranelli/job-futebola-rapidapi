@@ -1,4 +1,4 @@
-package com.sevenine.futebola.evento.core.exceptions;
+package com.sevenine.futebola.rapidapi.core.exceptions;
 
 public class LogNaoLocalizadoException extends ApplicationException {
     public LogNaoLocalizadoException() {

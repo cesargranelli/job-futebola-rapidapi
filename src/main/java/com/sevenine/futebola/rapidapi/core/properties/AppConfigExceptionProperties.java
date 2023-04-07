@@ -1,6 +1,6 @@
-package com.sevenine.futebola.evento.core.properties;
+package com.sevenine.futebola.rapidapi.core.properties;
 
-import com.sevenine.futebola.evento.core.exceptions.data.ExceptionData;
+import com.sevenine.futebola.rapidapi.core.exceptions.data.ExceptionData;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;

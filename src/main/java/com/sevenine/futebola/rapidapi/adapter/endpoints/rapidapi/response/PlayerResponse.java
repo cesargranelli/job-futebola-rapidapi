@@ -1,4 +1,4 @@
-package com.sevenine.futebola.evento.adapter.endpoints.rapidapi.response;
+package com.sevenine.futebola.rapidapi.adapter.endpoints.rapidapi.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;

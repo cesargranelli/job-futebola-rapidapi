@@ -1,13 +1,13 @@
-package com.sevenine.futebola.evento.domain.services;
+package com.sevenine.futebola.rapidapi.domain.services;
 
-import com.sevenine.futebola.evento.core.exceptions.HorarioJaExecucaoException;
-import com.sevenine.futebola.evento.core.properties.AppConfigJobProperties;
-import com.sevenine.futebola.evento.domain.entities.Clubes;
-import com.sevenine.futebola.evento.domain.entities.Jogadores;
-import com.sevenine.futebola.evento.domain.entities.Logs;
-import com.sevenine.futebola.evento.domain.entities.Parametros;
-import com.sevenine.futebola.evento.domain.enumerates.Fornecedor;
-import com.sevenine.futebola.evento.domain.ports.*;
+import com.sevenine.futebola.rapidapi.core.exceptions.HorarioJaExecucaoException;
+import com.sevenine.futebola.rapidapi.core.properties.AppConfigJobProperties;
+import com.sevenine.futebola.rapidapi.domain.entities.Clubes;
+import com.sevenine.futebola.rapidapi.domain.entities.Jogadores;
+import com.sevenine.futebola.rapidapi.domain.entities.Logs;
+import com.sevenine.futebola.rapidapi.domain.entities.Parametros;
+import com.sevenine.futebola.rapidapi.domain.enumerates.Fornecedor;
+import com.sevenine.futebola.rapidapi.domain.ports.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;

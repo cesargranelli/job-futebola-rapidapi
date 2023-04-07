@@ -1,7 +1,7 @@
-package com.sevenine.futebola.evento.domain.ports;
+package com.sevenine.futebola.rapidapi.domain.ports;
 
-import com.sevenine.futebola.evento.domain.entities.Clubes;
-import com.sevenine.futebola.evento.domain.entities.Jogadores;
+import com.sevenine.futebola.rapidapi.domain.entities.Clubes;
+import com.sevenine.futebola.rapidapi.domain.entities.Jogadores;
 
 import java.util.List;
 

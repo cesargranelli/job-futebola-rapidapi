@@ -1,9 +1,9 @@
-package com.sevenine.futebola.evento.domain.usecases;
+package com.sevenine.futebola.rapidapi.domain.usecases;
 
-import com.sevenine.futebola.evento.adapter.repositories.JogadorJpaRepository;
-import com.sevenine.futebola.evento.adapter.repositories.data.JogadorData;
-import com.sevenine.futebola.evento.domain.entities.Jogadores;
-import com.sevenine.futebola.evento.domain.ports.SalvaJogadoresPort;
+import com.sevenine.futebola.rapidapi.adapter.repositories.JogadorJpaRepository;
+import com.sevenine.futebola.rapidapi.adapter.repositories.data.JogadorData;
+import com.sevenine.futebola.rapidapi.domain.entities.Jogadores;
+import com.sevenine.futebola.rapidapi.domain.ports.SalvaJogadoresPort;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

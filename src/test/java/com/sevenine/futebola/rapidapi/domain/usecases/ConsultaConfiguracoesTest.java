@@ -1,12 +1,12 @@
-package com.sevenine.futebola.evento.domain.usecases;
+package com.sevenine.futebola.rapidapi.domain.usecases;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.json.JsonMapper;
-import com.sevenine.futebola.evento.adapter.repositories.ConfiguracaoJpaRepository;
-import com.sevenine.futebola.evento.adapter.repositories.data.ConfiguracaoData;
-import com.sevenine.futebola.evento.domain.entities.Parametros;
-import com.sevenine.futebola.evento.core.exceptions.ApplicationException;
-import com.sevenine.futebola.evento.core.exceptions.ConfiguracaoNaoLocalizadaException;
+import com.sevenine.futebola.rapidapi.adapter.repositories.ConfiguracaoJpaRepository;
+import com.sevenine.futebola.rapidapi.adapter.repositories.data.ConfiguracaoData;
+import com.sevenine.futebola.rapidapi.domain.entities.Parametros;
+import com.sevenine.futebola.rapidapi.core.exceptions.ApplicationException;
+import com.sevenine.futebola.rapidapi.core.exceptions.ConfiguracaoNaoLocalizadaException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

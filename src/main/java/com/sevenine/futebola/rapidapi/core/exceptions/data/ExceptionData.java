@@ -1,4 +1,4 @@
-package com.sevenine.futebola.evento.core.exceptions.data;
+package com.sevenine.futebola.rapidapi.core.exceptions.data;
 
 import lombok.Getter;
 import lombok.Setter;

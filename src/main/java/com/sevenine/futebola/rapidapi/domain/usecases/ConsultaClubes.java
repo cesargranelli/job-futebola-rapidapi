@@ -1,11 +1,11 @@
-package com.sevenine.futebola.evento.domain.usecases;
+package com.sevenine.futebola.rapidapi.domain.usecases;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sevenine.futebola.evento.adapter.repositories.ClubeJpaRepository;
-import com.sevenine.futebola.evento.adapter.repositories.data.ClubeData;
-import com.sevenine.futebola.evento.domain.entities.Clubes;
-import com.sevenine.futebola.evento.domain.ports.ConsultaClubesPort;
+import com.sevenine.futebola.rapidapi.adapter.repositories.ClubeJpaRepository;
+import com.sevenine.futebola.rapidapi.adapter.repositories.data.ClubeData;
+import com.sevenine.futebola.rapidapi.domain.entities.Clubes;
+import com.sevenine.futebola.rapidapi.domain.ports.ConsultaClubesPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

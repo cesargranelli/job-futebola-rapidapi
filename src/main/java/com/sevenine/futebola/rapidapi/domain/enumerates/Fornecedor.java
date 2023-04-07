@@ -1,4 +1,4 @@
-package com.sevenine.futebola.evento.domain.enumerates;
+package com.sevenine.futebola.rapidapi.domain.enumerates;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

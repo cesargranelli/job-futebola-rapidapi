@@ -1,4 +1,4 @@
-package com.sevenine.futebola.evento.core.configs;
+package com.sevenine.futebola.rapidapi.core.configs;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;

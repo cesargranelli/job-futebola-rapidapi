@@ -1,6 +1,6 @@
-package com.sevenine.futebola.evento.adapter.endpoints.rapidapi;
+package com.sevenine.futebola.rapidapi.adapter.endpoints.rapidapi;
 
-import com.sevenine.futebola.evento.adapter.endpoints.rapidapi.response.PlayerResponse;
+import com.sevenine.futebola.rapidapi.adapter.endpoints.rapidapi.response.PlayerResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

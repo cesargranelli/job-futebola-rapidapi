@@ -1,9 +1,9 @@
-package com.sevenine.futebola.evento.core.converters;
+package com.sevenine.futebola.rapidapi.core.converters;
 
-import com.sevenine.futebola.evento.adapter.repositories.data.FornecedorData;
-import com.sevenine.futebola.evento.adapter.repositories.data.JogadorData;
-import com.sevenine.futebola.evento.domain.entities.Jogadores;
-import com.sevenine.futebola.evento.domain.enumerates.Fornecedor;
+import com.sevenine.futebola.rapidapi.adapter.repositories.data.FornecedorData;
+import com.sevenine.futebola.rapidapi.adapter.repositories.data.JogadorData;
+import com.sevenine.futebola.rapidapi.domain.entities.Jogadores;
+import com.sevenine.futebola.rapidapi.domain.enumerates.Fornecedor;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.sevenine.futebola.evento.domain.entities;
+package com.sevenine.futebola.rapidapi.domain.entities;
 
 import lombok.Getter;
 import lombok.Setter;

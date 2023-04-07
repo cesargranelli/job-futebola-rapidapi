@@ -1,4 +1,4 @@
-package com.sevenine.futebola.evento.core.configs;
+package com.sevenine.futebola.rapidapi.core.configs;
 
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

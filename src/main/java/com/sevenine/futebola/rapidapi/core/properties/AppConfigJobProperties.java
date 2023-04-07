@@ -1,4 +1,4 @@
-package com.sevenine.futebola.evento.core.properties;
+package com.sevenine.futebola.rapidapi.core.properties;
 
 import lombok.Getter;
 import lombok.Setter;

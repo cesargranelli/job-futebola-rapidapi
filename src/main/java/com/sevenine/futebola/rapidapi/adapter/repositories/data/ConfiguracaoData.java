@@ -1,4 +1,4 @@
-package com.sevenine.futebola.evento.adapter.repositories.data;
+package com.sevenine.futebola.rapidapi.adapter.repositories.data;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

@@ -1,6 +1,6 @@
-package com.sevenine.futebola.evento.adapter.repositories;
+package com.sevenine.futebola.rapidapi.adapter.repositories;
 
-import com.sevenine.futebola.evento.adapter.repositories.data.LogData;
+import com.sevenine.futebola.rapidapi.adapter.repositories.data.LogData;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDateTime;

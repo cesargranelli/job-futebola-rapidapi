@@ -1,9 +1,9 @@
-package com.sevenine.futebola.evento.domain.usecases;
+package com.sevenine.futebola.rapidapi.domain.usecases;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sevenine.futebola.evento.adapter.repositories.LogJpaRepository;
-import com.sevenine.futebola.evento.adapter.repositories.data.LogData;
-import com.sevenine.futebola.evento.domain.entities.Logs;
+import com.sevenine.futebola.rapidapi.adapter.repositories.LogJpaRepository;
+import com.sevenine.futebola.rapidapi.adapter.repositories.data.LogData;
+import com.sevenine.futebola.rapidapi.domain.entities.Logs;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
