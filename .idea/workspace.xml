@@ -4,107 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96f82851-b662-4218-800c-83344c905efe" name="Changes" comment="Alteração do nome do projeto">
+    <list default="true" id="96f82851-b662-4218-800c-83344c905efe" name="Changes" comment="Ajuste nas dependências do projeto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/JobFutebolaEventoApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/adapter/endpoints/rapidapi/RapidApiFeignClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/adapter/endpoints/rapidapi/response/PlayerResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/adapter/repositories/ClubeJpaRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/adapter/repositories/ConfiguracaoJpaRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/adapter/repositories/JogadorJpaRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/adapter/repositories/LogJpaRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/adapter/repositories/data/ClubeData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/adapter/repositories/data/ConfiguracaoData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/adapter/repositories/data/FornecedorData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/adapter/repositories/data/JogadorData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/adapter/repositories/data/LogData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/configs/JavaTimeModuleConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/configs/LoggingConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/configs/PropertiesConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/configs/ScheduledConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/converters/JogadoresToJogadorDataConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/converters/PlayerToJogadorConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/exceptions/ApplicationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/exceptions/ConfiguracaoNaoLocalizadaException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/exceptions/ExecucaoJobException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/exceptions/HorarioJaExecucaoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/exceptions/LogNaoLocalizadoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/exceptions/data/ExceptionData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/properties/AppConfigExceptionProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/core/properties/AppConfigJobProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/entities/Clubes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/entities/Jogadores.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/entities/Logs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/entities/Parametros.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/enumerates/Fornecedor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/enumerates/Posicao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/ports/ConsultaClubesPort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/ports/ConsultaConfiguracoesPort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/ports/ConsultaJogadoresPort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/ports/ConsultaLogsPort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/ports/SalvaJogadoresPort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/services/ScheduledAtualizaJogadoresService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/usecases/ConsultaClubes$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/usecases/ConsultaClubes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/usecases/ConsultaConfiguracoes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/usecases/ConsultaJogadores.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/usecases/ConsultaLogs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sevenine/futebola/evento/domain/usecases/SalvaJogadores.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/com/sevenine/futebola/evento/domain/services/ScheduledValidaExecucoesTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/com/sevenine/futebola/evento/domain/usecases/ConsultaConfiguracoesTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/com/sevenine/futebola/evento/domain/usecases/ConsultaLogsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/com/sevenine/futebola/evento/domain/usecases/ConsultasClubesTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/com/sevenine/futebola/evento/domain/usecases/SalvaJogadoresTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/resources/application-test.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/JobFutebolaEventoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/JobFutebolaEventoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/endpoints/rapidapi/RapidApiFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/endpoints/rapidapi/RapidApiFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/endpoints/rapidapi/response/PlayerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/endpoints/rapidapi/response/PlayerResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/ClubeJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/ClubeJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/ConfiguracaoJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/ConfiguracaoJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/JogadorJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/JogadorJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/LogJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/LogJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/data/ClubeData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/data/ClubeData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/data/ConfiguracaoData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/data/ConfiguracaoData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/data/FornecedorData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/data/FornecedorData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/data/JogadorData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/data/JogadorData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/data/LogData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/repositories/data/LogData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/configs/JavaTimeModuleConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/configs/JavaTimeModuleConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/configs/LoggingConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/configs/LoggingConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/configs/PropertiesConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/configs/PropertiesConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/configs/ScheduledConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/configs/ScheduledConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/converters/JogadoresToJogadorDataConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/converters/JogadoresToJogadorDataConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/converters/PlayerToJogadorConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/converters/PlayerToJogadorConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/ApplicationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/ApplicationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/ConfiguracaoNaoLocalizadaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/ConfiguracaoNaoLocalizadaException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/ExecucaoJobException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/ExecucaoJobException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/HorarioJaExecucaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/HorarioJaExecucaoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/LogNaoLocalizadoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/LogNaoLocalizadoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/data/ExceptionData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/data/ExceptionData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/properties/AppConfigExceptionProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/properties/AppConfigExceptionProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/properties/AppConfigJobProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/properties/AppConfigJobProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/entities/Clubes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/entities/Clubes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/entities/Jogadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/entities/Jogadores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/entities/Logs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/entities/Logs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/entities/Parametros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/entities/Parametros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/enumerates/Fornecedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/enumerates/Fornecedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/enumerates/Posicao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/enumerates/Posicao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/ports/ConsultaClubesPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/ports/ConsultaClubesPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/ports/ConsultaConfiguracoesPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/ports/ConsultaConfiguracoesPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/ports/ConsultaJogadoresPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/ports/ConsultaJogadoresPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/ports/ConsultaLogsPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/ports/ConsultaLogsPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/ports/SalvaJogadoresPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/ports/SalvaJogadoresPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/services/ScheduledAtualizaJogadoresService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/services/ScheduledAtualizaJogadoresService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaClubes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaClubes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaConfiguracoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaConfiguracoes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaJogadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaJogadores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaLogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaLogs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/usecases/SalvaJogadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/usecases/SalvaJogadores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/services/ScheduledValidaExecucoesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/services/ScheduledValidaExecucoesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaConfiguracoesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaConfiguracoesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaLogsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaLogsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultasClubesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultasClubesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/usecases/SalvaJogadoresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/usecases/SalvaJogadoresTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,28 +65,28 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "main",
-    "last_directory_selection": "/home/sevenine/Projetos/Futebol/Spring/job-futebola-evento/src/test/java/com/sevenine/futebola/evento/interactors/usecase",
-    "last_opened_file_path": "/home/sevenine/Projetos/Futebol/Spring/job-futebola-rapidapi",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;/home/sevenine/Projetos/Futebol/Spring/job-futebola-rapidapi/src/test/java/com/sevenine/futebola/rapidapi/interactors/usecase&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sevenine/Projetos/Futebol/Spring/job-futebola-rapidapi&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.11494255&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.sevenine.futebola.evento.repositories" />
-      <recent name="com.sevenine.futebola.evento.datasources.restapi.sofascore.response" />
+      <recent name="com.sevenine.futebola.rapidapi.repositories" />
+      <recent name="com.sevenine.futebola.rapidapi.datasources.restapi.sofascore.response" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources" />
@@ -197,24 +98,24 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.sevenine.futebola.evento.interactors.usecase" />
-      <recent name="com.sevenine.futebola.evento.interactors" />
+      <recent name="com.sevenine.futebola.rapidapi.interactors.usecase" />
+      <recent name="com.sevenine.futebola.rapidapi.interactors" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.sevenine.futebola.evento.domain.usecases" />
-      <recent name="com.sevenine.futebola.evento.core.converters" />
-      <recent name="com.sevenine.futebola.evento.domain.ports" />
-      <recent name="com.sevenine.futebola.evento.domain.enumerates" />
-      <recent name="com.sevenine.futebola.evento.domain.entities" />
+      <recent name="com.sevenine.futebola.rapidapi.domain.usecases" />
+      <recent name="com.sevenine.futebola.rapidapi.core.converters" />
+      <recent name="com.sevenine.futebola.rapidapi.domain.ports" />
+      <recent name="com.sevenine.futebola.rapidapi.domain.enumerates" />
+      <recent name="com.sevenine.futebola.rapidapi.domain.entities" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="JobFutebolaEventoApplication" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sevenine.futebola.evento.JobFutebolaEventoApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.sevenine.futebola.rapidapi.JobFutebolaEventoApplication" />
       <module name="job-futebola-evento.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sevenine.futebola.evento.*" />
+          <option name="PATTERN" value="com.sevenine.futebola.rapidapi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -346,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680842522773</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Ajuste nas dependências do projeto">
+      <created>1680842813199</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680842813199</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -387,7 +295,8 @@
     <MESSAGE value="Consulta jogadores no rapidapi" />
     <MESSAGE value="Salva jogadores no banco de dados" />
     <MESSAGE value="Alteração do nome do projeto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alteração do nome do projeto" />
+    <MESSAGE value="Ajuste nas dependências do projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste nas dependências do projeto" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
