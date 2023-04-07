@@ -1,6 +1,8 @@
 package com.sevenine.futebola.rapidapi.domain.services;
 
+import com.sevenine.futebola.rapidapi.core.exceptions.ClubesNaoLocalizadosException;
 import com.sevenine.futebola.rapidapi.core.exceptions.HorarioJaExecucaoException;
+import com.sevenine.futebola.rapidapi.core.exceptions.JogadoresNaoLocalizadosException;
 import com.sevenine.futebola.rapidapi.core.properties.AppConfigJobProperties;
 import com.sevenine.futebola.rapidapi.domain.entities.Clubes;
 import com.sevenine.futebola.rapidapi.domain.entities.Jogadores;
@@ -30,16 +32,32 @@ public class ScheduledAtualizaJogadoresService {
 
         List<Logs> logs = consultaLogs.consulta(jobProperties.getCodigoAtualizaJogadores(), LocalDate.now());
 
+        validaSeJaOcorreuExecucaoParaHorario(parametros, logs);
+
+        List<Clubes> clubes = consultaClubes.consulta(Fornecedor.RAPIDAPI.getId());
+
+        validaSeHaClubesParaBuscarJogadores(clubes);
+
+        List<Jogadores> jogadores = consultaJogadores.consulta(clubes);
+
+        validaSeHaJogadoresParaAtualizar(jogadores);
+
+        salvaJogadores.salva(jogadores);
+    }
+
+    private void validaSeJaOcorreuExecucaoParaHorario(Parametros parametros, List<Logs> logs) {
         if (parametros.getHorarios().stream()
                 .anyMatch(hora -> logs.stream()
                         .anyMatch(value -> value.getDataHoraExecucao().getHour() == hora.getHour())))
             throw new HorarioJaExecucaoException();
+    }
 
-        List<Clubes> clubes = consultaClubes.consulta(Fornecedor.RAPIDAPI.getId());
+    private void validaSeHaClubesParaBuscarJogadores(List<Clubes> clubes) {
+        if (clubes.isEmpty()) throw new ClubesNaoLocalizadosException();
+    }
 
-        List<Jogadores> jogadores = consultaJogadores.consulta(clubes);
-
-        salvaJogadores.salva(jogadores);
+    private void validaSeHaJogadoresParaAtualizar(List<Jogadores> jogadores) {
+        if (jogadores.isEmpty()) throw new JogadoresNaoLocalizadosException();
     }
 
 }
