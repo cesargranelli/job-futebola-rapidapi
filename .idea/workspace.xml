@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96f82851-b662-4218-800c-83344c905efe" name="Changes" comment="Testes unitários da service">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultasClubesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultasClubesTest.java" afterDir="false" />
+    <list default="true" id="96f82851-b662-4218-800c-83344c905efe" name="Changes" comment="Correção para os testes de unidade da classe ConsultaClubes">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680880345413</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Correção para os testes de unidade da classe ConsultaClubes">
+      <created>1680900336742</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1680900336742</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -332,7 +338,8 @@
     <MESSAGE value="Correção dos nomes no workspace" />
     <MESSAGE value="Retirado execução automática pelo cron" />
     <MESSAGE value="Testes unitários da service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testes unitários da service" />
+    <MESSAGE value="Correção para os testes de unidade da classe ConsultaClubes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correção para os testes de unidade da classe ConsultaClubes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
