@@ -1,16 +1,19 @@
 package com.sevenine.futebola.rapidapi.domain.usecases;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sevenine.futebola.rapidapi.adapter.repositories.ClubeJpaRepository;
 import com.sevenine.futebola.rapidapi.adapter.repositories.data.ClubeData;
 import com.sevenine.futebola.rapidapi.domain.entities.Clubes;
 import com.sevenine.futebola.rapidapi.domain.entities.Logs;
 import com.sevenine.futebola.rapidapi.domain.enumerates.Fornecedor;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
@@ -35,11 +38,16 @@ class ConsultasClubesTest {
     @Mock
     private ClubeJpaRepository jpaRepository;
 
+    @BeforeEach
+    public void setUp() {
+        MockitoAnnotations.openMocks(objectMapper);
+    }
+
     @DisplayName("Deve retonar uma lista de clubes vazia")
     @Test
     void sucessoSemClubes() {
         when(jpaRepository.findByFornecedorId(anyLong())).thenReturn(Collections.emptyList());
-        when(objectMapper.convertValue(anyCollection(), eq(List.class)))
+        when(objectMapper.convertValue(anyCollection(), any(TypeReference.class)))
                 .thenReturn(Collections.emptyList());
 
         List<Clubes> clubesList = consultaClubes.consulta(Fornecedor.RAPIDAPI.getId());
@@ -52,7 +60,7 @@ class ConsultasClubesTest {
     void sucessoComClubes() {
         when(jpaRepository.findByFornecedorId(anyLong()))
                 .thenReturn(Collections.singletonList(new ClubeData()));
-        when(objectMapper.convertValue(anyCollection(), eq(List.class)))
+        when(objectMapper.convertValue(anyCollection(), any(TypeReference.class)))
                 .thenReturn(Collections.singletonList(new Logs()));
 
         List<Clubes> clubesList = consultaClubes.consulta(Fornecedor.RAPIDAPI.getId());

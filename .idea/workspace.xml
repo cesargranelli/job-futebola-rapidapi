@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96f82851-b662-4218-800c-83344c905efe" name="Changes" comment="Retirado execução automática pelo cron">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/ClubesNaoLocalizadosException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/core/exceptions/JogadoresNaoLocalizadosException.java" afterDir="false" />
+    <list default="true" id="96f82851-b662-4218-800c-83344c905efe" name="Changes" comment="Testes unitários da service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/services/ScheduledAtualizaJogadoresService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/services/ScheduledAtualizaJogadoresService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/services/ScheduledValidaExecucoesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/services/ScheduledAtualizaJogadoresServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultasClubesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultasClubesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +110,7 @@
       <recent name="com.sevenine.futebola.rapidapi.domain.enumerates" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ScheduledAtualizaJogadoresServiceTest">
+  <component name="RunManager" selected="JUnit.All in job-futebola-rapidapi.test">
     <configuration name="JobFutebolaEventoApplication" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -129,17 +126,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScheduledAtualizaJogadoresServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in job-futebola-rapidapi.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="job-futebola-rapidapi.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sevenine.futebola.rapidapi.domain.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sevenine.futebola.rapidapi.domain.services" />
-      <option name="MAIN_CLASS_NAME" value="com.sevenine.futebola.rapidapi.domain.services.ScheduledAtualizaJogadoresServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,7 +147,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ScheduledAtualizaJogadoresServiceTest" />
+        <item itemvalue="JUnit.All in job-futebola-rapidapi.test" />
         <item itemvalue="Application.JobFutebolaEventoApplication" />
       </list>
     </recent_temporary>
@@ -290,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680875121238</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Testes unitários da service">
+      <created>1680880345413</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1680880345413</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -334,9 +331,19 @@
     <MESSAGE value="Ajuste nas dependências do projeto" />
     <MESSAGE value="Correção dos nomes no workspace" />
     <MESSAGE value="Retirado execução automática pelo cron" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retirado execução automática pelo cron" />
+    <MESSAGE value="Testes unitários da service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testes unitários da service" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/domain/usecases/ConsultaClubes.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.springframework.data.r2dbc.core.R2dbcEntityTemplate" memberName="entityCallbacks" />
