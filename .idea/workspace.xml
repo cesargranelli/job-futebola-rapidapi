@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96f82851-b662-4218-800c-83344c905efe" name="Changes" comment="Correção para os testes de unidade da classe ConsultaClubes">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="96f82851-b662-4218-800c-83344c905efe" name="Changes" comment="Configuração .gitignore">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/entrypoints/controller/JogadoresController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sevenine/futebola/rapidapi/adapter/entrypoints/controller/apidoc/JogadoresApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +36,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="job-futebola-rapidapi" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="job-futebola-rapidapi" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -46,10 +46,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -71,26 +71,27 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_directory_selection&quot;: &quot;/home/sevenine/Projetos/Futebol/Spring/job-futebola-rapidapi/src/test/java/com/sevenine/futebola/rapidapi/interactors/usecase&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sevenine/Projetos/Futebol/Spring/job-futebola-rapidapi&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.11494255&quot;,
-    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "main",
+    "last_directory_selection": "/home/sevenine/Projetos/Futebol/Spring/job-futebola-rapidapi/src/test/java/com/sevenine/futebola/rapidapi/interactors/usecase",
+    "last_opened_file_path": "/home/sevenine/Projetos/Futebol/Spring/job-futebola-rapidapi",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.11494255",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "configurable.group.language"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sevenine.futebola.rapidapi.adapter.entrypoints.controller.apidoc" />
       <recent name="com.sevenine.futebola.rapidapi.repositories" />
       <recent name="com.sevenine.futebola.rapidapi.datasources.restapi.sofascore.response" />
     </key>
@@ -115,7 +116,7 @@
       <recent name="com.sevenine.futebola.rapidapi.domain.enumerates" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in job-futebola-rapidapi.test">
+  <component name="RunManager" selected="Application.JobFutebolaEventoApplication">
     <configuration name="JobFutebolaEventoApplication" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -152,8 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in job-futebola-rapidapi.test" />
         <item itemvalue="Application.JobFutebolaEventoApplication" />
+        <item itemvalue="JUnit.All in job-futebola-rapidapi.test" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680900336742</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Configuração .gitignore">
+      <created>1681051189197</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681051189197</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -345,7 +353,8 @@
     <MESSAGE value="Retirado execução automática pelo cron" />
     <MESSAGE value="Testes unitários da service" />
     <MESSAGE value="Correção para os testes de unidade da classe ConsultaClubes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correção para os testes de unidade da classe ConsultaClubes" />
+    <MESSAGE value="Configuração .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configuração .gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
