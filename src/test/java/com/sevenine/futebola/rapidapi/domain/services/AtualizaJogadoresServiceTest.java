@@ -30,10 +30,10 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class ScheduledAtualizaJogadoresServiceTest {
+class AtualizaJogadoresServiceTest {
 
     @InjectMocks
-    private ScheduledAtualizaJogadoresService service;
+    private AtualizaJogadoresService service;
 
     @Mock
     private ConsultaConfiguracoes consultaConfiguracoes;

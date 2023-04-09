@@ -18,7 +18,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Service
-public class ScheduledAtualizaJogadoresService {
+public class AtualizaJogadoresService {
 
     private final AppConfigJobProperties jobProperties;
     private final ConsultaConfiguracoesPort consultaConfiguracoes;
