@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mariadb://localhost:3306/futebola
+    url: jdbc:mariadb://192.168.49.2:30006/futebola
     username: root
     password: root
   cloud:
@@ -9,7 +9,6 @@ spring:
         config:
           rapidapi:
             url: https://footapi7.p.rapidapi.com/api
-#            url: https://viacep.com.br/ws/01001000/json/
             defaultRequestHeaders:
               'X-RapidAPI-Key': '67f551b823msh34866d68c74885cp1f1224jsnd7e6dabf5245'
               'X-RapidAPI-Host': 'footapi7.p.rapidapi.com'

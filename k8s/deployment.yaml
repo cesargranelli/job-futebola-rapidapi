@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: job-futebola-rapidapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: job-futebola-rapidapi
+  template:
+    metadata:
+      labels:
+        app: job-futebola-rapidapi
+    spec:
+      containers:
+        - name: job-futebola-rapidapi
+          image: cesargranellidev/job-futebola-rapidapi
+          ports:
+            - containerPort: 5000
+          imagePullPolicy: Always
